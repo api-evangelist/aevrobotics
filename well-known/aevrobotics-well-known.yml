@@ -1,0 +1,62 @@
+generated: '2026-09-12'
+method: probed
+source: >-
+  Direct anonymous HTTPS probes of the RFC 8615 well-known paths on every host this record knows:
+  the registrable domain appliedev.com, www.appliedev.com, and the three hosts found in Certificate
+  Transparency for appliedev.com (developer., sso., hub.). No API baseURL or OpenAPI servers[] host
+  exists for this provider, so those hosts are not represented.
+note: >-
+  Every probed path returned a genuine HTTP 404 from the Next.js origin on www.appliedev.com and
+  appliedev.com — the 404 body is the site's own error page (38,957 bytes, identical for a
+  known-nonexistent control path), so this is a real absence and not a soft-404 SPA catch-all.
+  No WellKnown or SecurityTxt pointer is wired into apis.yml, because nothing was served.
+  developer.appliedev.com and sso.appliedev.com resolve to 3.105.246.26 (AWS ap-southeast-2) and
+  hub.appliedev.com to 3.27.94.155, but the origins do not accept public connections on 443 or 80
+  (connection timeout / connection refused), so no HTTP status could be observed on those hosts.
+hosts:
+- host: www.appliedev.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: appliedev.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: developer.appliedev.com
+  unreachable: true
+  unreachable_reason: >-
+    DNS resolves to 3.105.246.26 but the origin does not accept public TCP connections on 443 or 80
+    (connection timed out). No HTTP status observable.
+  documents: []
+- host: sso.appliedev.com
+  unreachable: true
+  unreachable_reason: >-
+    DNS resolves to 3.105.246.26 but the origin does not accept public TCP connections on 443 or 80
+    (connection timed out). No HTTP status observable.
+  documents: []
+- host: hub.appliedev.com
+  unreachable: true
+  unreachable_reason: >-
+    DNS resolves to 3.27.94.155 but the origin refuses public TCP connections on 443 and 80
+    (connection refused). No HTTP status observable.
+  documents: []

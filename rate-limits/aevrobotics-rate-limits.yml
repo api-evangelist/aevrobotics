@@ -1,0 +1,21 @@
+generated: '2026-09-12'
+method: searched
+source: https://www.appliedev.com/cloud
+limit_count: 0
+note: >-
+  Applied EV publishes no rate limits, quotas, throttling policy or rate-limit response headers for
+  the IoV Cloud Platform. There is no public API reference to read them from: the developer host
+  (developer.appliedev.com) exists in Certificate Transparency and in DNS but refuses public
+  connections, and the marketing pages describe the Vehicle Task, Vehicle Mission, Drive and Pod &
+  Accessory APIs in prose only. An honest zero — the limits may well be documented to customers
+  behind the wall, but nothing is published where a machine or an integrator can read it.
+rate_limits: []
+headers: []
+evidence:
+- url: https://www.appliedev.com/cloud
+  status: 200
+  finding: Prose API descriptions only; no limits, windows, burst values or response headers.
+- url: https://developer.appliedev.com/
+  status: null
+  finding: >-
+    Resolves to 3.105.246.26; TCP connect to 443 and 80 times out. No public API reference to read.

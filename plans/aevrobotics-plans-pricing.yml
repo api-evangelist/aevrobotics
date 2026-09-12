@@ -1,0 +1,21 @@
+generated: '2026-09-12'
+method: searched
+source: https://www.appliedev.com/cloud
+plan_count: 0
+currency: null
+note: >-
+  Applied EV publishes no pricing, plans or tiers for the IoV Cloud Platform or any of its vehicle
+  APIs. The site has no /pricing page (the SPA origin returns a genuine 404 for it) and no pricing
+  section on the cloud platform page; the only commercial call to action anywhere on the site is an
+  "Enquire now" form at https://www.appliedev.com/?contact=true. This is an enterprise
+  contact-sales motion with no published commercial terms — an honest zero, not a missing fetch.
+plans: []
+evidence:
+- url: https://www.appliedev.com/cloud
+  status: 200
+  finding: >-
+    Names six vehicle APIs and the Vehicle Management System; carries no price, tier, quota or
+    metering language anywhere on the page. Only CTA is "Enquire now".
+- url: https://www.appliedev.com/pricing
+  status: 404
+  finding: No pricing page exists.

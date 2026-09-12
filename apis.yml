@@ -1,17 +1,37 @@
 aid: aevrobotics
-name: Aevrobotics
-description: 'Aevrobotics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: Applied EV
+description: >-
+  Applied EV (formerly AEV Robotics, legal entity Applied Electric Vehicles Ltd) is an Australian
+  software-defined vehicle company founded in Melbourne in 2015 by Julian Broadbent and Shane Ambry.
+  It builds the Blanc Robot, a cabinless autonomous-ready electric platform for logistics, industrial,
+  mining and agricultural transport; the Digital Backbone, a safety-rated ASIL-D programmable vehicle
+  control system; and an Internet-of-Vehicles (IoV) Cloud Platform the company markets as API-first.
+  The IoV platform is advertised as a set of vehicle APIs — Access Manager for identity and access
+  management, a Vehicle Task API, a Vehicle Mission API, a Drive API for autonomous driving and motion
+  control, a Pod and Accessory API, and Virtual Vehicles for simulation — together with a Vehicle
+  Management System for fleet telemetry, diagnostics, mapping, mission creation and over-the-air
+  software updates. No public developer portal, API reference or machine-readable contract is served:
+  the developer host resolves but refuses public connections, and the marketing pages route every
+  developer path to an enquiry form.
 url: https://raw.githubusercontent.com/api-evangelist/aevrobotics/refs/heads/main/apis.yml
+image: https://www.appliedev.com/api/assets/5146586c-032d-4b18-90fc-2edeffc24a30
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-12'
 modified: '2026-09-12'
 tags:
 - Company
+- Robotics
+- Autonomous Vehicles
+- Electric Vehicles
+- Software Defined Vehicles
+- Internet of Vehicles
+- Fleet Management
+- Automotive
+- Logistics
+- Mobility
+- Australia
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +39,50 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Plans
+  url: plans/aevrobotics-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aevrobotics-rate-limits.yml
+- type: LLMsTxt
+  url: llms/aevrobotics-llms.txt
+- type: DomainSecurity
+  url: security/aevrobotics-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aevrobotics
+  url: https://www.appliedev.com/
+- type: About
+  url: https://www.appliedev.com/about
+- type: Blog
+  url: https://www.appliedev.com/news
+- type: PrivacyPolicy
+  url: https://www.appliedev.com/privacy
+- type: TermsOfService
+  url: https://www.appliedev.com/terms
+- type: LinkedIn
+  url: https://linkedin.com/company/applied-ev
+- type: GitHubOrganization
+  url: https://github.com/appliedev
+x-enrichment:
+  date: '2026-09-12'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Applied EV markets six named IoV Cloud Platform vehicle APIs on
+    https://www.appliedev.com/cloud but serves no public reference for any of them; its developer
+    portal at developer.appliedev.com and its identity host sso.appliedev.com exist in Certificate
+    Transparency and resolve in DNS to 3.105.246.26, yet both origins silently drop public TCP
+    connections on 443 and 80, so the contract is reachable only from a customer tenant or an
+    allowlisted network.
+  evidence:
+  - url: https://www.appliedev.com/cloud
+    status: 200
+  - url: https://www.appliedev.com/openapi.json
+    status: 404
+  - url: https://www.appliedev.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.appliedev.com/llms.txt
+    status: 404
+  checked: '2026-09-12'

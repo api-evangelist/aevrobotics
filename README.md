@@ -64,5 +64,30 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aevrobotics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/aevrobotics
+Applied EV — formerly **AEV Robotics**, legal entity Applied Electric Vehicles Ltd — is an
+Australian software-defined vehicle company founded in Melbourne in 2015 by Julian Broadbent and
+Shane Ambry. It builds the **Blanc Robot**, a cabinless autonomous-ready electric platform for
+logistics, industrial, mining and agricultural transport; the **Digital Backbone**, a safety-rated
+ASIL-D programmable vehicle control system; and an **IoV (Internet-of-Vehicles) Cloud Platform**
+the company markets as API-first.
+
+## API surface
+
+Applied EV advertises six vehicle APIs on <https://www.appliedev.com/cloud> — Access Manager,
+Vehicle Task API, Vehicle Mission API, Drive API, Pod & Accessory API and Virtual Vehicles —
+together with a Vehicle Management System for fleet telemetry, diagnostics, mapping, mission
+creation and over-the-air updates.
+
+**None of it is publicly documented.** As of 2026-09-12 there is no public developer portal, API
+reference, OpenAPI/AsyncAPI/GraphQL contract, SDK, Postman collection, MCP server or agent card.
+The developer host `developer.appliedev.com` and the identity host `sso.appliedev.com` appear in
+Certificate Transparency and resolve in DNS, but both refuse public connections — access requires a
+customer tenant or an allowlisted network. The company's former domain `aevrobotics.com` no longer
+resolves; `appliedev.com` is the live domain. The GitHub organization
+[`appliedev`](https://github.com/appliedev) holds five repositories, all forks of third-party
+projects (CARLA, carla-ros-bridge, claslib, hawk-tui, autoware_adapi_msgs) — no first-party
+contract is published there.
+
+- Website: <https://www.appliedev.com/>
+- Cloud platform: <https://www.appliedev.com/cloud>
+- News: <https://www.appliedev.com/news>
