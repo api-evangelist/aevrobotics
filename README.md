@@ -1,4 +1,4 @@
-# Aevrobotics
+# Applied EV
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,30 +64,95 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Applied EV — formerly **AEV Robotics**, legal entity Applied Electric Vehicles Ltd — is an
-Australian software-defined vehicle company founded in Melbourne in 2015 by Julian Broadbent and
-Shane Ambry. It builds the **Blanc Robot**, a cabinless autonomous-ready electric platform for
-logistics, industrial, mining and agricultural transport; the **Digital Backbone**, a safety-rated
-ASIL-D programmable vehicle control system; and an **IoV (Internet-of-Vehicles) Cloud Platform**
-the company markets as API-first.
+Applied EV (formerly AEV Robotics, legal entity Applied Electric Vehicles Ltd) is an Australian software-defined vehicle company founded in Melbourne in 2015 by Julian Broadbent and Shane Ambry. It builds the Blanc Robot, a cabinless autonomous-ready electric platform for logistics, industrial, mining and agricultural transport; the Digital Backbone, a safety-rated ASIL-D programmable vehicle control system; and an Internet-of-Vehicles (IoV) Cloud Platform the company markets as API-first. The IoV platform is advertised as a set of vehicle APIs — Access Manager for identity and access management, a Vehicle Task API, a Vehicle Mission API, a Drive API for autonomous driving and motion control, a Pod and Accessory API, and Virtual Vehicles for simulation — together with a Vehicle Management System for fleet telemetry, diagnostics, mapping, mission creation and over-the-air software updates. No public developer portal, API reference or machine-readable contract is served: the developer host resolves but refuses public connections, and the marketing pages route every developer path to an enquiry form.
 
-## API surface
+**Areas:** Company · Robotics · Autonomous Vehicles · Electric Vehicles · Software Defined Vehicles · Internet of Vehicles · Fleet Management · Automotive · Logistics · Mobility · Australia
 
-Applied EV advertises six vehicle APIs on <https://www.appliedev.com/cloud> — Access Manager,
-Vehicle Task API, Vehicle Mission API, Drive API, Pod & Accessory API and Virtual Vehicles —
-together with a Vehicle Management System for fleet telemetry, diagnostics, mapping, mission
-creation and over-the-air updates.
+## Applied EV on APIs.io
 
-**None of it is publicly documented.** As of 2026-09-12 there is no public developer portal, API
-reference, OpenAPI/AsyncAPI/GraphQL contract, SDK, Postman collection, MCP server or agent card.
-The developer host `developer.appliedev.com` and the identity host `sso.appliedev.com` appear in
-Certificate Transparency and resolve in DNS, but both refuse public connections — access requires a
-customer tenant or an allowlisted network. The company's former domain `aevrobotics.com` no longer
-resolves; `appliedev.com` is the live domain. The GitHub organization
-[`appliedev`](https://github.com/appliedev) holds five repositories, all forks of third-party
-projects (CARLA, carla-ros-bridge, claslib, hawk-tui, autoware_adapi_msgs) — no first-party
-contract is published there.
+Everything profiled for Applied EV is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aevrobotics/](https://apis.io/providers/aevrobotics/)** — or go straight to one of the APIs or properties below.
 
-- Website: <https://www.appliedev.com/>
-- Cloud platform: <https://www.appliedev.com/cloud>
-- News: <https://www.appliedev.com/news>
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aevrobotics Domain Security](https://apis.io/security/aevrobotics/aevrobotics-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Aevrobotics Plans Pricing](https://apis.io/plans/aevrobotics/aevrobotics-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Aevrobotics Rate Limits](https://apis.io/rate-limits/aevrobotics/aevrobotics-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.appliedev.com/)
+- [Blog](https://www.appliedev.com/news)
+- [Terms of service](https://www.appliedev.com/terms)
+- [Privacy policy](https://www.appliedev.com/privacy)
+- [GitHub](https://github.com/appliedev)
+
+## API Evangelist rating
+
+**Kin Score 10.4** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aevrobotics/](https://apis.io/providers/aevrobotics/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Applied EV: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aevrobotics/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
